@@ -4,6 +4,7 @@
     <meta charset='utf-8'>
     <title>counter </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class='container' style="text-align: center;">
@@ -14,7 +15,16 @@
         <button id='decrement'>Decrement</button>
         <button id='reset'>Reset</button>
         <br>
+        <BR></BR>
+        <button id="save-btn" onclick="saveCount()">Save</button>
+        <br><br>
+        <h2>Previous Entries : </h2>
+        <h3 id='save'> 
+            <br>
+        <h3>
     </div>
+    <!-- PRINTING PREVIOUS  ENTRIES -->
+    
     <script src='/passengerCount/index.js'></script>
     <!-- <p>if you add the script tag at the end of the body tag, 
         the browser will load the HTML first and then the script.

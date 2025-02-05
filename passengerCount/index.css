@@ -1,0 +1,51 @@
+body{
+    background-image: url(image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+.container{
+    color: #132643;
+    background-color: #eefbffd4;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+     /* Responsive margin and width */
+     margin: 5% auto;
+     max-width: 600px;
+     width: 90%;
+
+}
+/* save button */
+#save-btn{
+    background-color: #0ab32e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#increment, #decrement{
+    background-color: #2206b0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#reset{
+    background-color: #f1af20;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
