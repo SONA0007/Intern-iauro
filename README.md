@@ -41,6 +41,3 @@ This repository contains my work as a software intern at iauro. It includes vari
 ## Contributions
 This repository is primarily for my internship work. However, feel free to fork, suggest improvements, or discuss ideas!
 
-## Contact
-For any queries or discussions, connect with me on [LinkedIn](#).
-
