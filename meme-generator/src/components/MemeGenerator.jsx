@@ -3,8 +3,8 @@ import { TextField, Button, Typography } from '@mui/material'
 
 function MemeGenerator() {
   const[memes, setMemes] = React.useState({
-    topText: 'OKay',
-    bottomText: 'done',
+    topText: '',
+    bottomText: '',
     randomImg: 'http://i.imgflip.com/1bij.jpg',
   })
   const [allMemesImgs, setAllMemesImgs] = React.useState([])
@@ -15,7 +15,6 @@ function MemeGenerator() {
       .then(data => setAllMemesImgs(data.data.memes) )
   },[])
 
-  
   function handleChange(event) {
     const {name, value} = event.currentTarget
     setMemes(prevMemes => {
@@ -25,8 +24,17 @@ function MemeGenerator() {
       }
       })
   }
+  function getRandomMeme() {
+    const randomNum = Math.floor(Math.random() * allMemesImgs.length)
+    const randomMemeImg = allMemesImgs[randomNum].url
+    setMemes(prevMemes => {
+      return {
+        ...prevMemes,
+        randomImg: randomMemeImg
+      }
+    })
+  }
 
-  
   return (
     <main>
     <div className='form'>
@@ -45,7 +53,7 @@ function MemeGenerator() {
       <label>
         <Typography variant="h6">Bottom Text</Typography>
         <TextField
-          id="standard-basic"
+          id="standard-basic-2"
           variant="standard"
           name='bottomText'
           placeholder='Bottom Text'
@@ -54,7 +62,7 @@ function MemeGenerator() {
           onChange={handleChange}
         />
       </label>
-      <Button type="Secondary" onClick={getRandomMeme}>Get a new meme image</Button>
+      <Button variant="contained" onClick={getRandomMeme}>Get a new meme image</Button>
       </div>
       <div className="meme">
         <img src={memes.randomImg} alt=''/>
