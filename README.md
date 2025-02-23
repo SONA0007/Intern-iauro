@@ -1,4 +1,5 @@
 # Intern-iauro
+This repository contains my work as a software intern at iauro. It includes various implementations and projects demonstrating my understanding of frontend technologies, primarily using React.
 
 ## Overview
 This repository contains my work as a software intern at iauro. It includes various implementations and projects demonstrating my understanding of frontend technologies, primarily using React.
@@ -12,13 +13,13 @@ This repository contains my work as a software intern at iauro. It includes vari
 - **Component Development:** Storybook, NX Workspace
 
 ## React Concepts Used
-- **React Router:** Implemented for navigation between different views.
-- **React Hooks:** Utilized `useState`, `useEffect`, `useMemo`, `useCallback` to manage state and performance optimizations.
-- **Context API & Redux:** Used for state management and handling global application state efficiently.
-- **Material UI & Custom Themes:** Integrated Material UI components and created custom themes for better UI consistency.
-- **Async API Calls:** Used Axios and Thunk pattern to handle asynchronous data fetching.
-- **Component-Based Development:** Built reusable components.
-- **Linting & Code Formatting:** Configured ESLint and Prettier to maintain code quality and consistency.
+- React Router DOM: Implemented for navigation between different views.
+- React Hooks: Utilized useState, useEffect, useMemo, useCallback to manage state and performance optimizations.
+- Context API & Redux: Used for state management and handling global application state efficiently.
+- Material UI & Custom Themes: Integrated Material UI components and created custom themes for better UI consistency.
+- Async API Calls: Used Axios in conjunction with Redux Thunk to handle asynchronous data fetching.
+- Component-Based Development: Built reusable components.
+- Linting & Code Formatting: Configured ESLint and Prettier to maintain code quality and consistency.
 
 ## How to Run the Project
 1. Clone the repository:
@@ -40,4 +41,3 @@ This repository contains my work as a software intern at iauro. It includes vari
 
 ## Contributions
 This repository is primarily for my internship work. However, feel free to fork, suggest improvements, or discuss ideas!
-
