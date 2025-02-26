@@ -1,0 +1,72 @@
+.pizza-order-app {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #f8ca34;
+    padding: 20px;
+    font-size: 24px;
+    color: rgb(70, 84, 0);
+    font-weight: bold;
+  }
+  
+  .cash-register {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+  
+  .menu-title, .orders-title {
+    font-size: 22px;
+    margin: 20px 0;
+    color: #333;
+  }
+  
+  .pizza-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu-list, .orders-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .menu-item, .order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+  }
+  
+  .order-button, .complete-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .order-button {
+    background-color: #da5204;
+    color: white;
+  }
+  
+  .order-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .complete-button {
+    background-color: #03711d;
+    color: white;
+  }
+  
+  .complete-button:hover {
+    background-color: #41dc62;
+  }
+  
