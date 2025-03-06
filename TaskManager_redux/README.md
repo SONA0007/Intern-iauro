@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Redux Toolkit Task Manager
+![image](https://github.com/user-attachments/assets/fcac1fdf-21cb-4d7b-a50f-f9ced83492ca)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 Overview
+This project is a **Task Manager** built using **React & Redux Toolkit**. It implements essential Redux concepts, including **slice, actions, reducers, store, and dispatch**, while integrating **Material UI** for UI components.
 
-## Available Scripts
+## 📚 Concepts Learned
+### **1. Key Redux Toolkit Concepts:**
+- **Slice**: Defines state and reducers in one place.
+- **Actions & Reducers**: Modify state via dispatched actions.
+- **Store**: Centralized state management.
+- **Dispatch**: Triggers state updates.
+- **useSelector & useDispatch**: Access and modify the Redux store in React components.
 
-In the project directory, you can run:
+### **2. React Hooks Used:**
+- `useSelector()` → Selects data from the Redux store.
+- `useDispatch()` → Dispatches actions to update the state.
 
-### `npm start`
+### **3. Material UI Integration:**
+- Used **Checkbox, List, Typography, and IconButton** for UI elements.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
+## 🛠️ Challenges Faced & Fixes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **1. "Cannot read properties of undefined (reading 'map')"**
+**Error:** Redux state was `undefined`, causing `tasks.map()` to break.
+**Fix:**
+- Ensured Redux initial state was correctly structured:
+  ```js
+  const initialState = { tasks: [] };
+  ```
+- Used **optional chaining** and a fallback value in `useSelector()`:
+  ```js
+  const tasks = useSelector((state) => state.tasks?.tasks || []);
+  ```
 
-### `npm test`
+---
+### **2. "MUI: A component is changing the uncontrolled checked state..."**
+**Error:** The Checkbox component switched from uncontrolled to controlled.
+**Fix:**
+- Ensured `task.completed` always had a default value:
+  ```js
+  <Checkbox checked={task.completed ?? false} />
+  ```
+- Modified Redux reducer to ensure every task includes `completed`:
+  ```js
+  state.tasks.push({ ...action.payload, completed: action.payload.completed ?? false });
+  ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
+### **3. Module Not Found Errors (taskSlice & store)**
+**Error:** Import paths were incorrect or Redux files were missing.
+**Fix:**
+- Ensured correct relative import paths:
+  ```js
+  import { removeTask, updateTask } from "../redux/taskSlice";
+  ```
+- Confirmed the Redux `store.js` was correctly configured:
+  ```js
+  import { configureStore } from "@reduxjs/toolkit";
+  import taskReducer from "./taskSlice";
+  
+  const store = configureStore({ reducer: { tasks: taskReducer } });
+  export default store;
+  ```
 
-### `npm run build`
+---
+## 📂 Project Structure
+```
+redux-work/
+│-- src/
+│   │-- component/
+│   │   │-- TaskForm.jsx
+│   │   │-- TaskList.jsx
+│   │-- redux/
+│   │   │-- taskSlice.js
+│   │   │-- store.js
+│   │-- index.js
+│-- package.json
+│-- README.md
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
+## 📌 Key Takeaways
+- Always **define an initial state** properly to prevent `undefined` errors.
+- **Use optional chaining** (`?.`) and fallback values (`|| []`) to prevent runtime crashes.
+- **Ensure controlled components** in Material UI always have default values.
+- **Verify import paths** to avoid `Module Not Found` errors.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
+## ✅ Next Steps
+- Implement **local storage** persistence for tasks.
+- Add **filtering options** (e.g., completed, pending tasks).
+- Improve **UI/UX** using Material UI components.
+- Convert project to **TypeScript** for better type safety.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
