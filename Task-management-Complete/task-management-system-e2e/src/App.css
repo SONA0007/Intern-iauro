@@ -1,0 +1,138 @@
+.logo {
+  width: 50px; 
+  height: auto; 
+}
+body {
+  margin: 2px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #0a1ca6;
+}
+.app-header-content{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+  padding: 0 40px;
+  margin-left: 5px;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  padding: 16px;
+  border-right: 1px solid #ddd;
+}
+
+.main-content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.task-input {
+  margin-bottom: 16px;
+  padding: 8px;
+  width: 70%;
+}
+.task-input button{
+  gap: 18px;
+  padding: 8px 8px;
+  margin: 10px 25px;
+}
+.task-list {
+  margin-top: 16px;
+  padding: 8px;
+  width: 90%;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.task-item.completed {
+  background-color: #f9f9f9;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #da7603;
+}
+
+.task-list-container {
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(206, 8, 8, 0.567);
+  margin-top: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* src/App.css */
+.filter-content {
+  display: flex;
+  max-width: 90%;
+  flex-direction: column;
+  gap: 26px;
+  padding: 16px;
+  margin: 0 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-input {
+  margin-bottom: 16px;
+  width: min-content;
+}
+
+.filter-input .MuiOutlinedInput-root {
+  border-radius: 8px;
+}
+
+.filter-input .MuiOutlinedInput-input {
+  padding: 12px;
+}
+
+.filter-checkbox {
+  color: #3f51b5; /* Primary color */
+}
+
+.filter-checkbox.Mui-checked {
+  color: #3f51b5; /* Primary color */
+}
+
+.filter-label {
+  font-size: 14px;
+  color: #333;
+}
+
+.filter-button {
+  background-color: #3f51b5; /* Primary color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-transform: none;
+  font-size: 14px;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #303f9f; /* Darker shade for hover */
+}
+.chart-container {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
