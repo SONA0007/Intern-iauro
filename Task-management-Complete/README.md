@@ -15,6 +15,10 @@ Certainly! Below is a detailed `README.md` file for your **Task Management Syste
 
 ---
 
+### sample image 
+![image](https://github.com/user-attachments/assets/32a53c20-dfa5-4dc9-a585-0544222fdab2)
+
+
 # **Task Management System - Frontend**
 ## **Overview**
 The **Task Management System** is a web application built using modern frontend technologies to help users manage their tasks efficiently. The frontend is developed using **React**, **Redux**, **React Router**, and **Material UI**, with **Vite** as the build tool. The application features a sidebar for navigation, a calendar view for task scheduling, and a profile page for user statistics.
