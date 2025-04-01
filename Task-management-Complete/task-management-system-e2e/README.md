@@ -111,6 +111,7 @@ The **Task Management System** is a web application built using modern frontend 
   - The **Uncaught TypeError** occurred because the remote module failed to load.
 - **Solution**:
   - Verified the remote app was running and serving the `remoteEntry.js` file.
+  - Most importantly you to run the build command of script from package.json file
   - Used `React.lazy` and `Suspense` to handle dynamic imports gracefully:
     ```javascript
     <Suspense fallback={<div>Loading Login...</div>}>
